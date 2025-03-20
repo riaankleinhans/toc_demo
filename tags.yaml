@@ -42,7 +42,7 @@ tags:
     tag_subprojects:
       - name: Operational Resilience-sub-foo
         mission_statement: >
-        Foo-Baz_Bar
+          Foo-Baz_Bar
         contact:
           slack: tag-operational-resilience #to be updated # Using parent TAG's contact
           mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
