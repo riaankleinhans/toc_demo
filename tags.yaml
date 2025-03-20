@@ -7,31 +7,52 @@ tags:
     label: tag-operational-resilience
     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: The Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: The Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+
     meetings:
       - description: TAG Operational Resilience Meeting
-        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
-      slack: tag-operational-resilience
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      slack: cncf/tag-operational-resilience #to be updated
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
     tag_subprojects:
       - name: Operational Resilience-sub-foo
-        mission_statement: Foo-Baz_Bar
+        mission_statement: >
+          Foo-Baz_Bar
         contact:
-          slack: tag-operational-resilience # Using parent TAG's contact
-          mailing_list: https://groups.google.com/forum/#!forum/foo # Using parent TAG's contact
+          slack: tag-operational-resilience #to be updated # Using parent TAG's contact
+          mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
+    leadership:
+      Subpproject Lead:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org  
   - dir: tag-developer-experience
     name: TAG Developer Experience
     mission_statement: >
