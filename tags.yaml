@@ -1,5 +1,5 @@
 tags:
-  - dir: tag-operational-resilience
+  - dir: tag-operational-resilience # Done
     name: TAG Operational Resilience
     mission_statement: >
       Observability, Management, Business Continuity, Resource Optimization, Cost Efficiency, Energy, Performance, Troubleshooting, Reliability, Day 2 Ops
@@ -28,10 +28,9 @@ tags:
           name: Foo Baz Bar
           company: Foo Baz Bar co.
           email: me@foobazbar.org
-
     meetings:
-      - description: TAG Operational Resilience Meeting
-        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list
+      - description: TAG Operational Resilience Meetings
+        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list #Calendar link from PCC
         recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: cncf/tag-operational-resilience #to be updated
@@ -47,7 +46,7 @@ tags:
           slack: tag-operational-resilience #to be updated # Using parent TAG's contact
           mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
     leadership:
-      Subpproject Lead:
+      Subpproject Leads:
         - github: foo
           lfx_id: baz
           name: Foo Baz Bar
@@ -59,66 +58,106 @@ tags:
       Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks
     charter_link: charter.md
     label: tag-developer-experience
-    leadership:
+     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: TAG Developer Experience Meeting
-        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+      - description: TAG Developer Experience Meetings
+        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-developer-experience?view=list # Calendar from PCC
+        recordings_url: https://www.youtube.com/playlist?foo  #to be updated
     contact:
-      slack: tag-developer-experience
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      slack: cncf/tag-developer-experience  #to be updated
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
     tag_subprojects:
       - name: Developer Experience-sub-foo
-        mission_statement: Foo-Baz_Bar
+        mission_statement: >
+          Foo-Baz_Bar
         contact:
-          slack: tag-developer-experience # Using parent TAG's contact
-          mailing_list: https://groups.google.com/forum/#!forum/foo # Using parent TAG's contact
-  - dir: tag-workloads-foundation
+          slack: tag-developer-experience #to be updated # Using parent TAG's contact
+          mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages   #to be updated # Using parent TAG's contact
+    leadership:
+      Subpproject Leads:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org      
+  - dir: tag-workloads-foundation # NEXT
     name: TAG Workloads Foundation
     mission_statement: >
       Containers, OS, Runtime, Virtual Machines, Serverless, Web Assembly, Batch, Scheduler, Orchestrator, Deployment, Dynamic Scaling, CI/CD
     charter_link: charter.md
     label: tag-workloads-foundation
     leadership:
+      leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: TAG Workloads Foundation Meeting
+      - description: TAG Workloads Foundation Meetings
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: tag-workloads-foundation
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
     tag_subprojects:
       - name: Workloads Foundation-sub-foo
         mission_statement: Foo-Baz_Bar
         contact:
-          slack: tag-workloads-foundation # Using parent TAG's contact
-          mailing_list: https://groups.google.com/forum/#!forum/foo # Using parent TAG's contact
+          slack: tag-workloads-foundation #to be updated # Using parent TAG's contact
+          mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
+    leadership:
+      Subpproject Leads:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
   - dir: tag-infrastructure
     name: TAG Infrastructure
     mission_statement: >
@@ -127,31 +166,50 @@ tags:
     label: tag-infrastructure
     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: TAG Infrastructure Meeting
+      - description: TAG Infrastructure Meetings
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: tag-infrastructure
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
     tag_subprojects:
       - name: Infrastructure-sub-foo
         mission_statement: Foo-Baz_Bar
         contact:
-          slack: tag-infrastructure # Using parent TAG's contact
-          mailing_list: https://groups.google.com/forum/#!forum/foo # Using parent TAG's contact
+          slack: tag-infrastructure #to be updated # Using parent TAG's contact
+          mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
+    leadership:
+      Subpproject Leads:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
   - dir: tag-security-and-compliance
     name: TAG Security and Compliance
     mission_statement: >
@@ -160,31 +218,50 @@ tags:
     label: tag-security-and-compliance
     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: TAG Security and Compliance Meeting
+      - description: TAG Security and Compliance Meetings
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: tag-security-and-compliance
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
     tag_subprojects:
       - name: Security and Compliance-sub-foo
         mission_statement: Foo-Baz_Bar
         contact:
-          slack: tag-security-and-compliance # Using parent TAG's contact
-          mailing_list: https://groups.google.com/forum/#!forum/foo # Using parent TAG's contact
+          slack: tag-security-and-compliance #to be updated # Using parent TAG's contact
+          mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated # Using parent TAG's contact
+    leadership:
+      Subpproject Leads:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
 toc_subprojects:
   - dir: project-reviews-subproject
     name: Project Reviews Subproject
@@ -193,25 +270,37 @@ toc_subprojects:
     label: project-reviews-subproject
     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: Project Reviews Subproject Meeting
+      - description: Project Reviews Subproject Meetings
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: project-reviews-subproject
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
   - dir: contributor-strategy-subproject
     name: Contributor Strategy Subproject
     mission_statement: Foo-Baz-Bar
@@ -219,22 +308,72 @@ toc_subprojects:
     label: contributor-strategy-subproject
     leadership:
       chairs:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
       tech_leads:
-        - github: riaankleinhans
-          name: Riaan Kleinhans
-          company: Linux Foundation
-          email: rkleinhans@contractor.linuxfoundation.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
     meetings:
-      - description: Contributor Strategy Subproject Meeting
+      - description: Contributor Strategy Subproject Meetings
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
-        recordings_url: https://www.youtube.com/playlist?foo
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
     contact:
       slack: contributor-strategy-subproject
-      mailing_list: https://groups.google.com/forum/#!forum/foo
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
       toc_liaison:
-        github: angellk
-        name: Karena Angell
+        github: foobar
+        name: Foo Bar
+  - dir: mentoring-subproject
+    name: Mentoring Subproject
+    mission_statement: Foo-Baz-Bar
+    charter_link: charter.md
+    label: mentoring-subproject
+    leadership:
+      chairs:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+      tech_leads:
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+        - github: foo
+          lfx_id: baz
+          name: Foo Baz Bar
+          company: Foo Baz Bar co.
+          email: me@foobazbar.org
+    meetings:
+      - description: Mentoring Subproject Meetings
+        tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week
+        recordings_url: https://www.youtube.com/playlist?foo #to be updated
+    contact:
+      slack: cncf/mentoring-subproject
+      mailing_list: https://lists.cncf.io/g/cncf-tag-TBA/messages #to be updated
+      toc_liaison:
+        github: foobar
+        name: Foo Bar
