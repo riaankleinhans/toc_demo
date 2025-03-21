@@ -10,7 +10,7 @@ tags: # Technical Advisory Groups
         - github: foo
           lfx_id: baz
           name: Foo Baz Bar
-          company: Foo Baz Bar co.
+          company: Foo Baz Bar co
           email: me@foobazbar.org
         - github: foo
           lfx_id: baz
