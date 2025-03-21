@@ -1,6 +1,5 @@
 # {{.Name}}
 
-
 ## Mission Statement
 {{.MissionStatement}}
 
@@ -10,6 +9,13 @@
 {{- if .Leadership.Chairs }}
 ### Chairs
 {{- range .Leadership.Chairs }}
+- {{.Name}} (**[@{{.GitHub}}](https://github.com/{{.GitHub}})**){{if .Company}}, {{.Company}}{{end}}
+{{- end }}
+{{- end }}
+
+{{- if .Leadership.TechLeads }}
+### Tech Leads
+{{- range .Leadership.TechLeads }}
 - {{.Name}} (**[@{{.GitHub}}](https://github.com/{{.GitHub}})**){{if .Company}}, {{.Company}}{{end}}
 {{- end }}
 {{- end }}
@@ -25,3 +31,10 @@
 - Slack: [#{{.Contact.Slack}}](https://slack.cncf.io/messages/{{.Contact.Slack}})
 - [Mailing List]({{.Contact.MailingList}})
 - TOC Liaison: {{.Contact.TOCLiaison.Name}} (**[@{{.Contact.TOCLiaison.GitHub}}](https://github.com/{{.Contact.TOCLiaison.GitHub}})**)
+
+{{- if .Leadership.SubprojectLeads }}
+### Subproject Leads
+{{- range .Leadership.SubprojectLeads }}
+- {{.Name}} (**[@{{.GitHub}}](https://github.com/{{.GitHub}})**){{if .Company}}, {{.Company}}{{end}}
+{{- end }}
+{{- end }}
