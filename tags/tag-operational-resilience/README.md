@@ -8,15 +8,21 @@ Observability, Management, Business Continuity, Resource Optimization, Cost Effi
 
 ## Leadership
 ### Chairs
-- Riaan Kleinhans (**[@riaankleinhans](https://github.com/riaankleinhans)**), The Linux Foundation
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+### Tech Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
 
 ## Meetings
-- **TAG Operational Resilience Meeting**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week) | [Recordings](https://www.youtube.com/playlist?foo)
+- **TAG Operational Resilience Meetings**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list) | [Recordings](https://www.youtube.com/playlist?foo)
 
 ## Contact
-- Slack: [#tag-operational-resilience](https://slack.cncf.io/messages/tag-operational-resilience)
-- [Mailing List](https://groups.google.com/forum/#!forum/foo)
-- TOC Liaison: Karena Angell (**[@angellk](https://github.com/angellk)**)
+- Slack: [#cncf/tag-operational-resilience](https://slack.cncf.io/messages/cncf/tag-operational-resilience})
+- [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+- TOC Liaison: Foo Bar (**[@foobar](https://github.com/foobar)**)
 
 ## Subprojects
-- **Operational Resilience-sub-foo**: [Mailing List](https://groups.google.com/forum/#!forum/foo)
+- **Operational Resilience-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+### Subproject Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
