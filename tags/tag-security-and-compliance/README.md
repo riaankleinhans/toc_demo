@@ -8,15 +8,21 @@ Security hygiene, Policy-as-code, Compliance, Auditing, Threat Modeling, Secure 
 
 ## Leadership
 ### Chairs
-- Riaan Kleinhans (**[@riaankleinhans](https://github.com/riaankleinhans)**), Linux Foundation
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+### Tech Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
 
 ## Meetings
-- **TAG Security and Compliance Meeting**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week) | [Recordings](https://www.youtube.com/playlist?foo)
+- **TAG Security and Compliance Meetings**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list) | [Recordings](https://www.youtube.com/playlist?foo)
 
 ## Contact
-- Slack: [#tag-security-and-compliance](https://slack.cncf.io/messages/tag-security-and-compliance)
-- [Mailing List](https://groups.google.com/forum/#!forum/foo)
-- TOC Liaison: Karena Angell (**[@angellk](https://github.com/angellk)**)
+- Slack: [#tag-security-and-compliance](https://slack.cncf.io/messages/tag-security-and-compliance})
+- [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+- TOC Liaison: Foo Bar (**[@foobar](https://github.com/foobar)**)
 
 ## Subprojects
-- **Security and Compliance-sub-foo**: [Mailing List](https://groups.google.com/forum/#!forum/foo)
+- **Security and Compliance-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+### Subproject Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.

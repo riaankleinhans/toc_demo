@@ -8,15 +8,21 @@ Containers, OS, Runtime, Virtual Machines, Serverless, Web Assembly, Batch, Sche
 
 ## Leadership
 ### Chairs
-- Riaan Kleinhans (**[@riaankleinhans](https://github.com/riaankleinhans)**), Linux Foundation
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+### Tech Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
 
 ## Meetings
-- **TAG Workloads Foundation Meeting**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week) | [Recordings](https://www.youtube.com/playlist?foo)
+- **TAG Workloads Foundation Meetings**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-workloads-foundation?view=list) | [Recordings](https://www.youtube.com/playlist?foo)
 
 ## Contact
-- Slack: [#tag-workloads-foundation](https://slack.cncf.io/messages/tag-workloads-foundation)
-- [Mailing List](https://groups.google.com/forum/#!forum/foo)
-- TOC Liaison: Karena Angell (**[@angellk](https://github.com/angellk)**)
+- Slack: [#tag-workloads-foundation](https://slack.cncf.io/messages/tag-workloads-foundation})
+- [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+- TOC Liaison: Foo Bar (**[@foobar](https://github.com/foobar)**)
 
 ## Subprojects
-- **Workloads Foundation-sub-foo**: [Mailing List](https://groups.google.com/forum/#!forum/foo)
+- **Workloads Foundation-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-TBA/messages)
+### Subproject Leads
+- Foo Baz Bar (**[@foo](https://github.com/foo)**), Foo Baz Bar co.
