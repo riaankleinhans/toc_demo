@@ -1,9 +1,9 @@
 name: Fetch Project Data and Create PR
 
 on:
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    - cron: '0 0 * * *'
 
 jobs:
   fetch-and-update:
@@ -16,23 +16,34 @@ jobs:
         run: |
           echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
 
-      - name: Fetch data and convert to YAML
+      - name: Install jq and yq
         run: |
-          # Install yq for JSON to YAML conversion
+          sudo apt-get update
+          sudo apt-get install -y jq
           sudo snap install yq
-          
-          # Run the API call and process output
+
+      - name: Fetch and process data
+        id: process
+        run: |
+          # Fetch and process data, ensuring array output
           curl -H "Authorization: Bearer ${{ env.API_TOKEN }}" \
             "https://api-gw.platform.linuxfoundation.org/project-service/v1/projects/a0941000002wBz4AAE" | \
-            jq '.Projects[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {Name: .Name, RepositoryURL: .RepositoryURL, Category: .Category}' | \
+            jq '[.Projects[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {Name: .Name, RepositoryURL: .RepositoryURL, Category: .Category}]' | \
             yq -P > projects.yaml
 
+      - name: Debug output
+        if: always()
+        run: |
+          echo "YAML output:"
+          cat projects.yaml || echo "No YAML file"
+
       - name: Create Pull Request
+        if: steps.process.outcome == 'success'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Update projects data"
           title: "Automated project data update"
-          body: "This PR updates the projects data from PCC API"
+          body: "This PR updates the projects data from the Linux Foundation API"
           branch: "auto-project-update"
           delete-branch: true
           token: ${{ secrets.GITHUB_TOKEN }}
