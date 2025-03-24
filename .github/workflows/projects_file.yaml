@@ -14,17 +14,30 @@ jobs:
     - name: Install jq
       run: sudo apt-get update && sudo apt-get install -y jq
 
-    - name: Generate YAML file
+    - name: Fetch API Data
+      id: fetch_api
       env:
         API_TOKEN: ${{ secrets.API_TOKEN }}
       run: |
         TOKEN="$API_TOKEN"
         API_URL="https://api-gw.platform.linuxfoundation.org/project-service/v1/projects/a0941000002wBz4AAE"
-        curl -H "Authorization: Bearer $TOKEN" "$API_URL" | jq -r '[.[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {name: .Name, repository_url: .RepositoryURL, category: .Category}] | to_entries[] | (.value.name + ":\n  repository_url: " + .value.repository_url + "\n  category: " + .value.category)' > output.yaml
+        API_RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" "$API_URL") # -s for silent mode
+        echo "API_RESPONSE<<EOF" >> $GITHUB_STEP_SUMMARY
+        echo "$API_RESPONSE" >> $GITHUB_STEP_SUMMARY
+        echo "EOF" >> $GITHUB_STEP_SUMMARY
+        echo "API_RESPONSE=$API_RESPONSE" >> $GITHUB_OUTPUT #save the response to be used by the next step.
+
+    - name: Process API Data with jq
+      if: ${{ success() }}
+      env:
+        API_RESPONSE: ${{ steps.fetch_api.outputs.API_RESPONSE }}
+      run: |
+        echo "$API_RESPONSE" | jq '.Projects[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {name: .Name, repository_url: .RepositoryURL, category: .Category}' > output.yaml
         echo "---" | cat - output.yaml > temp.yaml && mv temp.yaml output.yaml
         cat output.yaml
 
     - name: Create branch and commit
+      if: ${{ success() }}
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions Bot"
@@ -34,6 +47,7 @@ jobs:
         git push origin generated-yaml
 
     - name: Create Pull Request
+      if: ${{ success() }}
       uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
