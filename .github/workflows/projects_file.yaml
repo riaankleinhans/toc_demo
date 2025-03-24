@@ -1,59 +1,38 @@
-name: Generate and PR YAML
+name: Fetch Project Data and Create PR
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual trigger
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
 
 jobs:
-  generate-and-pr:
+  fetch-and-update:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install jq
-      run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Set up environment
+        run: |
+          echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
 
-    - name: Fetch API Data
-      id: fetch_api
-      env:
-        API_TOKEN: ${{ secrets.API_TOKEN }}
-      run: |
-        TOKEN="$API_TOKEN"
-        API_URL="https://api-gw.platform.linuxfoundation.org/project-service/v1/projects/a0941000002wBz4AAE"
-        API_RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN" "$API_URL") #Added -s flag
-        echo "API_RESPONSE=\"$API_RESPONSE\"" >> $GITHUB_OUTPUT
+      - name: Fetch data and convert to YAML
+        run: |
+          # Install yq for JSON to YAML conversion
+          sudo snap install yq
+          
+          # Run the API call and process output
+          curl -H "Authorization: Bearer ${{ env.API_TOKEN }}" \
+            "https://api-gw.platform.linuxfoundation.org/project-service/v1/projects/a0941000002wBz4AAE" | \
+            jq '.Projects[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {Name: .Name, RepositoryURL: .RepositoryURL, Category: .Category}' | \
+            yq -P > projects.yaml
 
-    - name: Debug API Response for JQ
-      if: ${{ success() }}
-      run: |
-        echo "API Response for jq:"
-        echo "${{ steps.fetch_api.outputs.API_RESPONSE }}"
-
-    - name: Process API Data with jq
-      if: ${{ success() }}
-      run: |
-        echo "${{ steps.fetch_api.outputs.API_RESPONSE }}" | jq 'select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {name: .Name, repository_url: .RepositoryURL, category: .Category}' > output.yaml
-        echo "---" | cat - output.yaml > temp.yaml && mv temp.yaml output.yaml
-        cat output.yaml
-
-    - name: Create branch and commit
-      if: ${{ success() }}
-      run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions Bot"
-        git checkout -b generated-yaml
-        git add output.yaml
-        git commit -m "Generate output.yaml"
-        git push origin generated-yaml
-
-    - name: Create Pull Request
-      if: ${{ success() }}
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "Generate output.yaml"
-        branch: generated-yaml
-        title: "Update projects YAML"
-        body: "This PR updates the projects YAML file with the latest data."
-        base: main
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Update projects data"
+          title: "Automated project data update"
+          body: "This PR updates the projects data from PCC API"
+          branch: "auto-project-update"
+          delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
