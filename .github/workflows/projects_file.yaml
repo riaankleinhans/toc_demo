@@ -25,12 +25,10 @@ jobs:
       - name: Fetch and process data
         id: process
         run: |
-          # Fetch data and process into YAML
           curl -H "Authorization: Bearer ${{ env.API_TOKEN }}" \
             "https://api-gw.platform.linuxfoundation.org/project-service/v1/projects/a0941000002wBz4AAE" | \
             jq '[.Projects[] | select(.ProjectType == "Project" and (.Category == "Graduated" or .Category == "Sandbox" or .Category == "Incubating")) | {Name: .Name, RepositoryURL: .RepositoryURL, Category: .Category}]' | \
             yq -P > projects.yaml
-          # Fail if the file is empty or invalid
           if [ ! -s projects.yaml ]; then
             echo "Error: projects.yaml is empty or not created"
             exit 1
@@ -55,4 +53,4 @@ jobs:
           body: "This PR updates the projects data from the Linux Foundation API"
           branch: "auto-project-update"
           delete-branch: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TAGS_YAML_UPDATE_GHA }}
