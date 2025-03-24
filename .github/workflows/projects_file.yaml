@@ -25,7 +25,7 @@ jobs:
         echo "API_RESPONSE<<EOF" >> $GITHUB_STEP_SUMMARY
         echo "$API_RESPONSE" >> $GITHUB_STEP_SUMMARY
         echo "EOF" >> $GITHUB_STEP_SUMMARY
-        echo "API_RESPONSE=$API_RESPONSE" >> $GITHUB_OUTPUT
+        echo "API_RESPONSE=\"$API_RESPONSE\"" >> $GITHUB_OUTPUT # Add quotes here
 
     - name: Debug API Response for JQ
       if: ${{ success() }}
