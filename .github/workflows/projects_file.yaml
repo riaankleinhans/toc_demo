@@ -2,9 +2,7 @@ name: Fetch Project Data and Create PR
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
-
+ 
 jobs:
   fetch-and-update:
     runs-on: ubuntu-latest
